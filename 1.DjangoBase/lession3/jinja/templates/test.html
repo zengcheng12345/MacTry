@@ -1,0 +1,14 @@
+<!--将test的功能导入到base.html中-->
+{% extends 'base.html' %}
+
+<!--将静态文件css导入，进网页中去-->
+<!--与Django中的函数load有差别，可直接导入-->
+{% block css_style %}
+<link rel="stylesheet" href="/static/test.css" />
+{% endblock %}
+{% block content %}
+
+<!--如何将前端与网页绑定-->
+{{name|title}},{{age|test(2000)}}
+
+{% endblock %}
